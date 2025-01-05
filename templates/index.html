@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Sentimientos - Futurista</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Análisis de Sentimientos AI</h1>
+        
+        <div class="input-container">
+            <textarea 
+                id="textInput" 
+                placeholder="Escribe aquí el texto que deseas analizar..."
+            ></textarea>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="pulse"></div>
+            <div class="pulse"></div>
+            <div class="pulse"></div>
+        </div>
+
+        <button id="analyzeBtn">Analizar Sentimiento</button>
+
+        <div class="error" id="error"></div>
+
+        <div class="result" id="result">
+            <div class="sentiment" id="sentiment"></div>
+            <div class="score" id="score"></div>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
