@@ -1,6 +1,6 @@
 # Ejemplo de Uso de Golang como API
 
-![Go Logo](https://golang.org/lib/godoc/images/go-logo-blue.svg)
+![Go Logo]([https://golang.org/lib/godoc/images/go-logo-blue.svg](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFOpjBRhjnId1ZjM60DLgEl7U_kNGwvJ3NfA&s))
 
 Este proyecto es un ejemplo práctico del uso de **Golang** como API en combinación con tecnologías front-end y Python. La aplicación incluye un backend desarrollado en Go y un frontend manejado mediante Flask (Python), HTML, CSS y JavaScript.
 
