@@ -1,6 +1,8 @@
 # Ejemplo de Uso de Golang como API
 
-Este proyecto es un ejemplo práctico del uso de **Golang** como API en combinación con tecnologías front-end y Python. La aplicación incluye un backend desarrollado en Go y un frontend manejado mediante Flask (Python), HTML, CSS y JavaScript. 
+![Go Logo](https://golang.org/lib/godoc/images/go-logo-blue.svg)
+
+Este proyecto es un ejemplo práctico del uso de **Golang** como API en combinación con tecnologías front-end y Python. La aplicación incluye un backend desarrollado en Go y un frontend manejado mediante Flask (Python), HTML, CSS y JavaScript.
 
 ## ¿Qué es Go (Golang)?
 
@@ -18,6 +20,10 @@ Este proyecto es un ejemplo práctico del uso de **Golang** como API en combinac
 
 4. **Concurrencia eficiente:**
    - Utiliza **gorutinas**, que son hilos ligeros de ejecución. Estas permiten manejar miles de tareas concurrentes simultáneamente con un uso mínimo de recursos, optimizando aplicaciones que necesitan alto rendimiento.
+
+   - **Garbage Collector**: Es una funcionalidad integrada que se encarga de liberar memoria no utilizada automáticamente, eliminando la necesidad de gestionarla manualmente y reduciendo los errores relacionados con fugas de memoria.
+
+   - **Gorutinas**: Son hilos ligeros y eficientes que permiten ejecutar funciones de forma concurrente, lo que mejora significativamente el rendimiento en aplicaciones que manejan múltiples tareas simultáneamente.
 
 5. **Compatibilidad multiplataforma:**
    - Soporta múltiples sistemas operativos como Windows, macOS y Linux.
@@ -68,7 +74,7 @@ cd ejemplo_go
    ```bash
    cd backend
    ```
-2. Instala las dependencias necesarias con el siguiente comando:
+2. Instala las dependencias necesarias (solo si es requerido) usando:
    ```bash
    go get nombre_dependencia
    ```
@@ -78,35 +84,18 @@ cd ejemplo_go
    ```
 
 ### Paso 3: Configurar el frontend (Flask)
-1. Navega a la carpeta del frontend:
-   ```bash
-   cd ../frontend
-   ```
-2. Instala las dependencias necesarias de Python (si las hay).
+1. Instala las dependencias necesarias de Python desde el archivo `requirements.txt`:
    ```bash
    pip install -r requirements.txt
    ```
-3. Ejecuta la aplicación Flask:
+2. Ejecuta la aplicación Flask:
    ```bash
    python app.py
    ```
 
 ### Paso 4: Acceso a la aplicación
 - El backend estará disponible en el puerto configurado (por defecto `localhost:8080`).
-- El frontend estará disponible en el puerto configurado por Flask (por defecto `localhost:5000`).
+- El frontend estará disponible en el puerto configurado por Flask (por defecto `localhost:3000`).
 
-## Contribuciones
 
-Si deseas contribuir a este proyecto, sigue estos pasos:
-1. Haz un fork del repositorio.
-2. Crea una nueva rama para tu funcionalidad: `git checkout -b feature/nueva-funcionalidad`.
-3. Realiza tus cambios y haz un commit: `git commit -m "Añadida nueva funcionalidad"`.
-4. Envía un pull request.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más información.
-
----
-
-¡Gracias por explorar este proyecto! Si tienes preguntas o sugerencias, no dudes en abrir un issue.
+¡Gracias por explorar este proyecto!
