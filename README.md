@@ -36,9 +36,15 @@ Este proyecto es un ejemplo práctico del uso de **Golang** como API en combinac
 
 ## Descripción del Proyecto
 
-El proyecto demuestra cómo utilizar Golang como núcleo para una API REST mientras se integra con un frontend sencillo basado en Flask y tecnologías web estándar. Incluye funcionalidades para gestionar solicitudes y respuestas con soporte para herramientas modernas como AWS SDK y otras bibliotecas populares.
+El proyecto demuestra cómo utilizar Golang como núcleo para una API REST mientras se integra con un frontend sencillo basado en Flask y tecnologías web estándar. Incluye funcionalidades para gestionar solicitudes y respuestas usando bibliotecas modernas como:
 
-Además, es importante configurar un archivo `.env` con la API key necesaria para interactuar con Cohere. Para ello, primero crea una cuenta en [Cohere](https://cohere.com) y genera tu API key. Luego, en el archivo `.env`, agrega la siguiente línea:
+- **godotenv**: Para gestionar variables de entorno.
+- **rs/cors**: Para configurar y manejar CORS.
+- **cohere-go**: Para interactuar con la API de Cohere y analizar sentimientos.
+
+Además, hace uso de **gorutinas** para manejar concurrencia de manera eficiente, garantizando un rendimiento óptimo.
+
+Es importante configurar un archivo `.env` con la API key necesaria para interactuar con Cohere. Para ello, primero crea una cuenta en [Cohere](https://cohere.com) y genera tu API key. Luego, en el archivo `.env`, agrega la siguiente línea:
 ```plaintext
 COHERE_API_KEY=tu_api_key_aqui
 ```
@@ -47,10 +53,7 @@ COHERE_API_KEY=tu_api_key_aqui
 
 ### Backend (Golang)
 - **Librerías:**
-  - [aws-sdk-go-v2](https://github.com/aws/aws-sdk-go-v2) `v1.32.7`
-  - [smithy-go](https://github.com/aws/smithy-go) `v1.22.1`
   - [cohere-go](https://github.com/cohere-ai/cohere-go) `v2.12.3`
-  - [google/uuid](https://github.com/google/uuid) `v1.4.0`
   - [godotenv](https://github.com/joho/godotenv) `v1.5.1`
   - [rs/cors](https://github.com/rs/cors) `v1.11.1`
 
