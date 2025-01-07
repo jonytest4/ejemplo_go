@@ -20,8 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const API_URL = 'http://localhost:8080/analyze';
     // Colores asociados a cada tipo de sentimiento, para hacer la UI más interactiva
     const SENTIMENT_COLORS = {
-        'POSITIVO': '#00ff9d', // Verde para sentimientos positivos
-        'NEGATIVO': '#ff0055', // Rojo para negativos
+        'EMOCIONADO.': '#3380ff', // Verde para sentimientos positivos
+        'NEGATIVO.': '#ff5733', // Rojo para negativos
         'NEUTRAL': '#ffaa00' // Amarillo para neutral
     };
 
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         error.classList.remove('visible'); // Asegura que no se vea el error
         result.classList.add('visible'); // Muestra el contenedor de resultados
         
-        sentimentElement.textContent = sentiment; // Escribe el sentimiento detectado
+        sentimentElement.textContent = sentiment.toUpperCase(); // Escribe el sentimiento detectado
         sentimentElement.style.color = SENTIMENT_COLORS[sentiment] || '#ffffff'; // Cambia el color según el sentimiento
         scoreElement.textContent = `Intensidad: ${(score * 100).toFixed(1)}%`; // Muestra la intensidad como porcentaje
     };

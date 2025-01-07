@@ -93,14 +93,26 @@ func main() {
 			return
 		}
 		// Llamamos a la función para analizar el sentimiento
-		response, err := analyzeSentiment(client, req.Text)
-		if err != nil {
-			// En caso de error, respondemos con un mensaje de error
-			json.NewEncoder(w).Encode(SentimentResponse{
-				Error: "Error al analizar sentimiento: " + err.Error(),
-			})
-			return
-		}
+		//Generando una función concurrente con Gorutine
+		// Creamos un canal para manejar la comunicación entre la goroutine y el flujo principal
+		ch := make(chan *SentimentResponse)
+		// Iniciamos una goroutine para ejecutar el análisis de sentimiento de manera concurrente
+		go func() {
+			// Llamamos a la función analyzeSentiment para procesar el texto recibido
+			response, err := analyzeSentiment(client, req.Text)
+			// Si ocurre un error, enviamos un objeto SentimentResponse con el mensaje de error al canal
+			if err != nil {
+				ch <- &SentimentResponse{
+					Error: "Error al analizar sentimiento: " + err.Error(),
+				}
+				// En caso de error, respondemos con un mensaje de error
+			} else {
+				// Si no hay errores, enviamos la respuesta procesada al canal
+				ch <- response
+			}
+		}()
+		// Esperamos a recibir el resultado de la goroutine a través del canal
+		response := <-ch
 		// Configuramos el tipo de contenido de la respuesta como JSON
 		w.Header().Set("Content-Type", "application/json")
 		// Enviamos la respuesta codificada en formato JSON
