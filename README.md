@@ -38,6 +38,11 @@ Este proyecto es un ejemplo práctico del uso de **Golang** como API en combinac
 
 El proyecto demuestra cómo utilizar Golang como núcleo para una API REST mientras se integra con un frontend sencillo basado en Flask y tecnologías web estándar. Incluye funcionalidades para gestionar solicitudes y respuestas con soporte para herramientas modernas como AWS SDK y otras bibliotecas populares.
 
+Además, es importante configurar un archivo `.env` con la API key necesaria para interactuar con Cohere. Para ello, primero crea una cuenta en [Cohere](https://cohere.com) y genera tu API key. Luego, en el archivo `.env`, agrega la siguiente línea:
+```plaintext
+COHERE_API_KEY=tu_api_key_aqui
+```
+
 ## Tecnologías Utilizadas
 
 ### Backend (Golang)
@@ -78,7 +83,8 @@ cd ejemplo_go
    ```bash
    go get nombre_dependencia
    ```
-3. Ejecuta el archivo principal:
+3. Configura el archivo `.env` para agregar la API key de Cohere.
+4. Ejecuta el archivo principal:
    ```bash
    go run main.go
    ```
@@ -96,6 +102,5 @@ cd ejemplo_go
 ### Paso 4: Acceso a la aplicación
 - El backend estará disponible en el puerto configurado (por defecto `localhost:8080`).
 - El frontend estará disponible en el puerto configurado por Flask (por defecto `localhost:3000`).
-
 
 ¡Gracias por explorar este proyecto!
