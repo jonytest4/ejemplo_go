@@ -2,11 +2,11 @@
 
 ![Go Logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFOpjBRhjnId1ZjM60DLgEl7U_kNGwvJ3NfA&s)
 
-Este proyecto es un ejemplo práctico del uso de **Golang** como API en combinación con tecnologías front-end y Python, la aplicación incluye un backend desarrollado en Go y un frontend manejado mediante Flask (Python), HTML, CSS y JavaScript.
+Este proyecto es un ejemplo práctico del uso de **Golang** como API en combinación con tecnologías front-end y Python. La aplicación incluye un backend desarrollado en Go y un frontend manejado mediante Flask (Python), HTML, CSS y JavaScript.
 
 ## ¿Qué es Go (Golang)?
 
-**Golang**, desarrollado por Google, es un lenguaje de programación diseñado para ser simple, eficiente y escalable; su sintaxis clara y concisa, junto con su compilación rápida y capacidad para manejar concurrencia de manera eficiente, lo convierten en una excelente opción para proyectos de alto rendimiento.
+**Golang**, desarrollado por Google, es un lenguaje de programación diseñado para ser simple, eficiente y escalable. Su sintaxis clara y concisa, junto con su compilación rápida y capacidad para manejar concurrencia de manera eficiente, lo convierten en una excelente opción para proyectos de alto rendimiento.
 
 ### Características principales:
 1. **Simplicidad y legibilidad:**
@@ -16,10 +16,10 @@ Este proyecto es un ejemplo práctico del uso de **Golang** como API en combinac
    - Genera binarios portátiles y eficientes en tiempo récord, mejorando tanto el desarrollo como el despliegue.
 
 3. **Gestión automática de memoria:**
-   - Incluye un **garbage collector**, un mecanismo que gestiona automáticamente la memoria del programa, reduciendo errores comunes como fugas de memoria al liberar recursos no utilizados.
+   - Incluye un **garbage collector**, un mecanismo que gestiona automáticamente la memoria del programa. Esto reduce errores comunes como fugas de memoria al liberar recursos no utilizados.
 
 4. **Concurrencia eficiente:**
-   - Utiliza **gorutinas**, que son hilos ligeros de ejecución que permiten manejar miles de tareas concurrentes simultáneamente con un uso mínimo de recursos, optimizando aplicaciones que necesitan alto rendimiento.
+   - Utiliza **gorutinas**, que son hilos ligeros de ejecución. Estas permiten manejar miles de tareas concurrentes simultáneamente con un uso mínimo de recursos, optimizando aplicaciones que necesitan alto rendimiento.
 
    - **Garbage Collector**: Es una funcionalidad integrada que se encarga de liberar memoria no utilizada automáticamente, eliminando la necesidad de gestionarla manualmente y reduciendo los errores relacionados con fugas de memoria.
 
@@ -36,7 +36,7 @@ Este proyecto es un ejemplo práctico del uso de **Golang** como API en combinac
 
 ## Descripción del Proyecto
 
-El proyecto demuestra cómo utilizar Golang como núcleo para una API REST mientras se integra con un frontend sencillo basado en Flask y tecnologías web estándar, incluye funcionalidades para gestionar solicitudes y respuestas usando bibliotecas modernas como:
+El proyecto demuestra cómo utilizar Golang como núcleo para una API REST mientras se integra con un frontend sencillo basado en Flask y tecnologías web estándar. Incluye funcionalidades para gestionar solicitudes y respuestas usando bibliotecas modernas como:
 
 - **godotenv**: Para gestionar variables de entorno.
 - **rs/cors**: Para configurar y manejar CORS.
@@ -44,7 +44,7 @@ El proyecto demuestra cómo utilizar Golang como núcleo para una API REST mient
 
 Además, hace uso de **gorutinas** para manejar concurrencia de manera eficiente, garantizando un rendimiento óptimo.
 
-Es importante configurar un archivo `.env` con la API key necesaria para interactuar con Cohere. Para ello, primero crea una cuenta en [Cohere](https://cohere.com) y genera tu API key, luego, en el archivo `.env`, agrega la siguiente línea:
+Es importante configurar un archivo `.env` con la API key necesaria para interactuar con Cohere. Para ello, primero crea una cuenta en [Cohere](https://cohere.com) y genera tu API key. Luego, en el archivo `.env`, agrega la siguiente línea:
 ```plaintext
 COHERE_API_KEY=tu_api_key_aqui
 ```
@@ -82,9 +82,9 @@ cd ejemplo_go
    ```bash
    cd backend
    ```
-2. Instala las dependencias necesarias (solo si es requerido) usando:
+2. Descarga las dependencias listadas en el archivo `go.mod` ejecutando:
    ```bash
-   go get nombre_dependencia
+   go mod tidy
    ```
 3. Configura el archivo `.env` para agregar la API key de Cohere.
 4. Ejecuta el archivo principal:
@@ -105,5 +105,6 @@ cd ejemplo_go
 ### Paso 4: Acceso a la aplicación
 - El backend estará disponible en el puerto configurado (por defecto `localhost:8080`).
 - El frontend estará disponible en el puerto configurado por Flask (por defecto `localhost:3000`).
+
 
 ¡Gracias por explorar este proyecto!
